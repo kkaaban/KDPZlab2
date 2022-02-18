@@ -3,10 +3,10 @@ package com;
 public class Main {
 
     public static void main(String[] args) {
-        Password password = new Password("12345");
-        Account account = new Account("aaa@gmail.com", password, 15);
-        System.out.println(account.getPASSWORD().getPassword());
-        password.setPassword("00000");
-        System.out.println(account.getPASSWORD().getPassword());
+        Account account = new Account("2", new Password("2"), 22);
+        Account account1 = account.clone();
+        System.out.println(account.hashCode());
+        System.out.println(account1.hashCode());
+
     }
 }
